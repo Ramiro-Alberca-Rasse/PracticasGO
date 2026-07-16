@@ -29,9 +29,9 @@ func EjObligatorio1() {
 
 	for i := 0; i < len(aux); i++ {
 
-		if strings.EqualFold(aux[i], "miércoles") {
+		if strings.EqualFold(aux[i], "miércoles") { //compara
 			palabraOriginal := []rune(aux[i]) // guardamos en formato de runas
-			nuevaPalabra := make([]rune, len(palabraReemplazo))
+			nuevaPalabra := make([]rune, len(palabraReemplazo)) // slice con espacio para la nueva palabra
 
 			for j := 0; j < len(palabraOriginal) && j < len(palabraReemplazo); j++ {
 
