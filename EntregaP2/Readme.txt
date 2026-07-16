@@ -1,0 +1,1 @@
+Los metodos tienen ya comentarios explicando lo que hacen, deje el main con las pruebas que me hizo la ia porque pense que por ahi se los hacia mas facil a ustedes testearlo
