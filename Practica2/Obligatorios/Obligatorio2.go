@@ -99,12 +99,13 @@ func CrearTransaccion(origen string, destino string, monto float64) Transaccion 
 	return transaccion
 }
 
-func calcularHash(hashPrevio string, trans Transaccion, timestamp time.Time) string {
+func calcularHash(hashPrevio string, trans Transaccion, timestamp time.Time) string { // le pasas todos los datos del bloque y crea una clave unica
+
 	record := fmt.Sprintln(hashPrevio, trans.Origen, trans.Destino, trans.Monto, timestamp)
 	h := sha256.New()
 	h.Write([]byte(record))
 	return hex.EncodeToString(h.Sum(nil))
-} // no termine de entender como funciona
+} // si el bloque cambia entonces la clave tambien
 
 func (bc *Blockchain) InsertarBloque(trans Transaccion) error {
 
